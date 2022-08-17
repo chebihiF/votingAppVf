@@ -1,0 +1,15 @@
+# @format
+apiVersion: v1
+kind: Service
+metadata:
+  name: result-service
+  labels:
+    name: result-app-service
+spec:
+  selector:
+    app: result-app-pod
+  type: NodePort
+  ports:
+    - port: 80
+      targetPort: 80
+      nodePort: 30002

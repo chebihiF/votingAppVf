@@ -1,0 +1,13 @@
+# @format
+apiVersion: v1
+kind: Service
+metadata:
+  name: redis
+  labels:
+    app: redis-app-pod
+spec:
+  selector:
+    app: redis-app-pod
+  ports:
+    - port: 6379
+      targetPort: 6379

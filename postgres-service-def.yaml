@@ -1,0 +1,13 @@
+# @format
+apiVersion: v1
+kind: Service
+metadata:
+  name: db
+  labels:
+    app: db-app-pod
+spec:
+  selector:
+    app: db-app-pod
+  ports:
+    - port: 5432
+      targetPort: 5432
