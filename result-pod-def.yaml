@@ -1,0 +1,14 @@
+# @format
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: result-pod
+  labels:
+    app: result-app-pod
+spec:
+  containers:
+    - name: result-app
+      image: fhcebihi/result
+      ports:
+        - containerPort: 80
